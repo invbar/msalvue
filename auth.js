@@ -82,7 +82,7 @@ export default {
       auth: {
         clientId: clientId,
         redirectUri: window.location.origin,
-        authority: 'https://login.microsoftonline.com/82bd0589-e71d-479c-a34d-d54c5dec0bbb/'
+        authority: 'https://login.microsoftonline.com/tenant/'
       },
       cache: {
         cacheLocation: 'localStorage'
@@ -163,7 +163,7 @@ export default {
   // Call through to acquireTokenSilent or acquireTokenPopup
   //
   
-  async acquireTokenv2(scopes = ['7caccb92-ce16-4d08-a3f6-959160bf514f/.default']) {
+  async acquireTokenv2(scopes = ['clientid/.default']) {
     if (!msalApp) {
       return null
     }
